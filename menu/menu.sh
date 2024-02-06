@@ -87,11 +87,20 @@ echo -e "\e[1;32m Country       \e[0m: $LOC"
 echo -e "\e[1;32m DOMAIN        \e[0m: $domain"	
 echo -e "\e[1;32m DATE & TIME   \e[0m: $DATE2"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
-echo -e "\e[1;34m                      RAM INFO                    \e[0m"
+echo -e "\e[1;34m                      SERVER INFO                    \e[0m"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e ""
 echo -e "\e[1;32m RAM USED   \e[0m: $uram MB"	
 echo -e "\e[1;32m RAM TOTAL  \e[0m: $tram MB"
+echo -e "\e[1;32m CPU USAGE  \e[0m: $cpu_usage"
+echo -e ""
+echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e "\e[1;34m                      BANDWIDTH INFO                    \e[0m"
+echo -e "\e[1;33m -------------------------------------------------\e[0m"
+echo -e ""
+echo -e "\e[1;32m DOWNLOAD   \e[0m: $dtoday MB"	
+echo -e "\e[1;32m UPLOAD     \e[0m: $utoday MB"	
+echo -e "\e[1;32m TOTAL      \e[0m: $ttoday MB"
 echo -e ""
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
 echo -e "\e[1;34m                       MENU                       \e[0m"
@@ -128,6 +137,6 @@ case $opt in
 8) clear ; clearcache ;;
 9) clear ; reboot ; /sbin/reboot ;;
 x) exit ;;
-*) echo "Anda salah tekan " ; sleep 1 ; menu ;;
+*) echo "Silahkan masukkan pilihan dengan benar! " ; sleep 1 ; menu ;;
 esac
 

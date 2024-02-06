@@ -1,64 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport"
-		content="width=device-width,
-				initial-scale=1.0" />
-	<title>
-		Auto script VPS givpn
-	</title>
-	<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/givpn/givpn/master/favicon.ico">
-	<style>
-		body {
-			padding: 25px;
-			background-color: white;
-			color: black;
-			font-size: 25px;
-		}
-
-		.dark-mode {
-			background-color: black;
-			color: white;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN Successful Running</title>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
-<center>
-	<h1>givpn</h1>
-	<h2>Auto script VPS</h2>
-	<div>
-		<button onclick="darkMode()">Darkmode</button>
-	</div>
-	<script>
-		function darkMode() {
-			var element = document.body;
-			element.classList.toggle("dark-mode");
-		}
-	</script>
-	</center>
-	</div>
-        <div class="footer">
-            <footer>
-		<p align="center">
-		
-            <a href="https://github.com/givpn/" target="_blank"><img src="https://img.shields.io/badge/link-Github-blue"></a>
-			<a href="https://t.me/givpn/" target="_blank"><img src="https://img.shields.io/badge/Chat-Telegram-blue"></a>
-			<a href="https://t.me/givpn_grup/" target="_blank"><img src="https://img.shields.io/badge/Grup-Telegram-blue"></a>
-			    </p>
-</div>
-		<p align="center">
-            <a href="https://paypal.me/givpn11" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-yellow"></a>
-			<a href="https://raw.githubusercontent.com/givpn/AutoScriptXray/master/image/qris-givpn.jpg" target="_blank"><img src="https://img.shields.io/badge/Donate-QRIS-red"></a>
-			<a href="https://www.blockchain.com/explorer/addresses/btc/3BE1deCJcuykuTHMzmrmNYgN51E24Hix8i" target="_blank"><img src="https://img.shields.io/badge/Donate-Bitcoin-orange"></a>
-			<a href="https://www.blockchain.com/explorer/addresses/eth/0x3eb09df9a72e8e333e202116ff3eb348b3ebf554" target="_blank"><img src="https://img.shields.io/badge/Donate-Ethereum-blue"></a>
-			    </p>
-            </footer>
-        </div>
-		<p align="center">
-  <a><img src="https://img.shields.io/badge/givpn-Auto_script_VPS%202023-blue" style="max-width:200%;">
-    </p>
+
+  <div class="container mt-5">
+    <h1 class="text-center">VPN Successful Running</h1>
+    <p class="lead text-center">List of Protocols and Ports:</p>
+
+    <ul class="list-group">
+      <li class="list-group-item">OpenSSH: 22</li>
+      <li class="list-group-item">SSH Websocket: 80</li>
+      <li class="list-group-item">SSH SSL Websocket: 443</li>
+      <li class="list-group-item">Stunnel4: 222, 777</li>
+      <li class="list-group-item">Dropbear: 109, 143</li>
+      <li class="list-group-item">Badvpn: 7100-7900</li>
+      <li class="list-group-item">Nginx: 81</li>
+      <li class="list-group-item">Vmess WS TLS: 443</li>
+      <li class="list-group-item">Vless WS TLS: 443</li>
+      <li class="list-group-item">Trojan WS TLS: 443</li>
+      <li class="list-group-item">Shadowsocks WS TLS: 443</li>
+      <li class="list-group-item">Vmess WS none TLS: 80</li>
+      <li class="list-group-item">Vless WS none TLS: 80</li>
+      <li class="list-group-item">Trojan WS none TLS: 80</li>
+      <li class="list-group-item">Shadowsocks WS none TLS: 80</li>
+      <li class="list-group-item">Vmess gRPC: 443</li>
+      <li class="list-group-item">Vless gRPC: 443</li>
+      <li class="list-group-item">Trojan gRPC: 443</li>
+      <li class="list-group-item">Shadowsocks gRPC: 443</li>
+    </ul>
+
+    <p class="mt-3">Caliph Cloud</p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
