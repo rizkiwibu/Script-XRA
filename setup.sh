@@ -124,7 +124,7 @@ echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
 echo -e "$BYellow----------------------------------------------------------$NC"
 read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 if test $dns -eq 1; then
-bash <(curl -s https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/ssh/cf)
+bash <(curl -s https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/ssh/cf.sh)
 elif test $dns -eq 2; then
 read -rp "Enter Your Domain / masukan domain : " dom
 echo "IP=$dom" > /var/lib/ipvps.conf
