@@ -168,7 +168,8 @@ fi
 
 mesg n || true
 clear
-menu
+neofetch
+echo "Type 'menu' to display the vpn menu"
 END
 chmod 644 /root/.profile
 
@@ -242,7 +243,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/givpn-----------------------------" | tee -a log-install.txt
+echo "----------------------/[----t.me/caliphdev---------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
@@ -252,7 +253,7 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
-echo " Auto reboot in 10 Seconds "
+echo "Auto reboot in 10 Seconds "
 sleep 10
 rm -rf setup.sh
 reboot
