@@ -205,7 +205,7 @@ gg="PM"
 else
 gg="AM"
 fi
-curl -sS ipv4.icanhazip.com > /etc/myipvps
+curl -sS http://checkip.amazonaws.com/ > /etc/myipvps
 echo ""
 echo "=================================================================="  | tee -a log-install.txt
 echo "      ___                                    ___         ___      "  | tee -a log-install.txt
@@ -243,7 +243,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "----------------------/[----t.me/caliphdev---------------------------" | tee -a log-install.txt
+echo "--------------------------t.me/caliphdev--------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
@@ -253,8 +253,8 @@ rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e ""
-echo "Auto reboot in 10 Seconds "
-sleep 10
+for i in {10..1}; do echo -ne "\rAuto reboot in $i Seconds "; sleep 1; done
+echo -e "Rebooting...";
 rm -rf setup.sh
 reboot
 
