@@ -38,8 +38,8 @@ chmod +x /usr/local/bin/xray
 # Make Folder XRay
 mkdir -p /var/log/xray/
 #
-wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/grpc/menu/geosite.dat"
-wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/AutoScriptXray/grpc/ma/geoip.dat"
+wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/grpc/menu/geosite.dat"
+wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/AutoScriptXray/grpc/ma/geoip.dat"
 
 #
 cat > /etc/xray/vmessgrpc.json << END
@@ -316,10 +316,10 @@ systemctl enable vless-grpc
 systemctl restart vless-grpc
 #
 cd /usr/bin
-wget -O addgrpc "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/grpc/addgrpc.sh"
-wget -O delgrpc "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/grpc/delgrpc.sh"
-wget -O renewgrpc "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/grpc/renewgrpc.sh"
-wget -O cekgrpc "https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/grpc/cekgrpc.sh"
+wget -O addgrpc "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/grpc/addgrpc.sh"
+wget -O delgrpc "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/grpc/delgrpc.sh"
+wget -O renewgrpc "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/grpc/renewgrpc.sh"
+wget -O cekgrpc "https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/grpc/cekgrpc.sh"
 
 chmod +x addgrpc
 chmod +x delgrpc
