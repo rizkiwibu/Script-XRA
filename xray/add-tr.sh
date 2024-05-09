@@ -56,11 +56,11 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[0;41;36m           TROJAN ACCOUNT           \E[0m" | tee -a /etc/log-create-trojan.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-trojan.log
 echo -e "Remarks        : ${user}" | tee -a /etc/log-create-trojan.log
+echo -e "Host/IP        : ${domain}" | tee -a /etc/log-create-trojan.log
 echo -e "IP             : ${ip}" | tee -a /etc/log-create-trojan.log
 echo -e "Country        : ${country}" | tee -a /etc/log-create-trojan.log
 echo -e "Region         : ${region}" | tee -a /etc/log-create-trojan.log
 echo -e "ISP            : ${isp}" | tee -a /etc/log-create-trojan.log
-echo -e "Host/IP        : ${domain}" | tee -a /etc/log-create-trojan.log
 echo -e "Wildcard       : (bug.com).${domain}" | tee -a /etc/log-create-trojan.log
 echo -e "Port TLS       : ${tls}" | tee -a /etc/log-create-trojan.log
 echo -e "Port none TLS  : ${ntls}" | tee -a /etc/log-create-trojan.log
