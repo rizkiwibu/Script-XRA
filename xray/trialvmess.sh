@@ -64,32 +64,45 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
+# Getting IP information
+ip_info=$(curl -sS https://ipinfo.io/json)
+ip=$(echo $ip_info | jq -r '.ip')
+country=$(echo $ip_info | jq -r '.country')
+region=$(echo $ip_info | jq -r '.region')
+isp=$(echo $ip_info | jq -r '.org')
 
-
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;41;36m       Trial Mmess      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "Wildcard       : (bug.com).${domain}"
-echo -e "Port TLS       : ${tls}"
-echo -e "Port none TLS  : ${none}"
-echo -e "Port gRPC      : ${tls}"
-echo -e "id             : ${uuid}"
-echo -e "alterId        : 0"
-echo -e "Security       : auto"
-echo -e "Network        : ws"
-echo -e "Path           : /vmess"
-echo -e "ServiceName    : vmess-grpc"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link TLS       : ${vmesslink1}"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link none TLS  : ${vmesslink2}"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Link gRPC      : ${vmesslink3}"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Expired On     : $exp"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+systemctl restart xray > /dev/null 2>&1
+service cron restart > /dev/null 2>&1
+clear
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "\\E[0;41;36m        Vmess Account        \E[0m" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "Remarks        : ${user}" | tee -a /etc/log-create-vmess.log
+echo -e "Domain         : ${domain}" | tee -a /etc/log-create-vmess.log
+echo -e "IP             : ${ip}" | tee -a /etc/log-create-vmess.log
+echo -e "Country        : ${country}" | tee -a /etc/log-create-vmess.log
+echo -e "Region         : ${region}" | tee -a /etc/log-create-vmess.log
+echo -e "ISP            : ${isp}" | tee -a /etc/log-create-vmess.log
+echo -e "Wildcard       : (bug.com).${domain}" | tee -a /etc/log-create-vmess.log
+echo -e "Port TLS       : ${tls}" | tee -a /etc/log-create-vmess.log
+echo -e "Port none TLS  : ${none}" | tee -a /etc/log-create-vmess.log
+echo -e "Port gRPC      : ${tls}" | tee -a /etc/log-create-vmess.log
+echo -e "id             : ${uuid}" | tee -a /etc/log-create-vmess.log
+echo -e "alterId        : 0" | tee -a /etc/log-create-vmess.log
+echo -e "Security       : auto" | tee -a /etc/log-create-vmess.log
+echo -e "Network        : ws" | tee -a /etc/log-create-vmess.log
+echo -e "Path           : /vmess" | tee -a /etc/log-create-vmess.log
+echo -e "ServiceName    : vmess-grpc" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "Link gRPC      : ${vmesslink3}" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo -e "Expired On     : $exp" | tee -a /etc/log-create-vmess.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-vmess.log
+echo "" | tee -a /etc/log-create-vmess.log
 echo ""
 
 read -n 1 -s -r -p "Press any key to back on menu"
