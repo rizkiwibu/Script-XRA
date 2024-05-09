@@ -12,15 +12,15 @@ domain=$(cat /etc/xray/domain)
 tls=$(cat /etc/xray/vmessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
 vl=$(cat /etc/xray/vlessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/vmessgrpc.json | wc -l)
+        read -rp "User: " -e user
+        CLIENT_EXISTS=$(grep -w $user /etc/xray/vmessgrpc.json | wc -l)
 
-		if [[ ${CLIENT_EXISTS} == '1' ]]; then
-			echo ""
-			echo "A client with the specified name was already created, please choose another name."
-			exit 1
-		fi
-	done
+        if [[ ${CLIENT_EXISTS} == '1' ]]; then
+            echo ""
+            echo "A client with the specified name was already created, please choose another name."
+            exit 1
+        fi
+    done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
@@ -42,8 +42,14 @@ cat > /etc/xray/$user-tls.json << EOF
       "tls": "tls"
 }
 EOF
-vmess_base641=$( base64 -w 0 <<< $vmess_json1)
-##vmesslink#1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
+
+# Getting IP information
+ip_info=$(curl -sS https://ipinfo.io/json)
+ip=$(echo $ip_info | jq -r '.ip')
+country=$(echo $ip_info | jq -r '.country')
+region=$(echo $ip_info | jq -r '.region')
+isp=$(echo $ip_info | jq -r '.org')
+
 vmesslink1="vmess://${uuid}@${domain}:${tls}/?type=grpc&encryption=auto&serviceName=GunService&security=tls&sni=${domain}#$user"
 vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${domain}#$user"
 systemctl restart fb-vmess-grpc.service
@@ -56,6 +62,10 @@ echo -e "================================="
 echo -e "            XRAY GRPC            " 
 echo -e "================================="
 echo -e "Remarks           : ${user}"
+echo -e "IP                : ${ip}"
+echo -e "Country           : ${country}"
+echo -e "Region            : ${region}"
+echo -e "ISP               : ${isp}"
 echo -e "Domain            : ${domain}"
 echo -e "Port VMess        : ${tls}"
 echo -e "Port VLess        : ${vl}"
@@ -74,4 +84,3 @@ echo -e "Link VLess GRPC  : "
 echo -e "${vlesslink1}"
 echo -e "================================="
 echo -e "Expired On     : $exp"
-echo -e "================================="
