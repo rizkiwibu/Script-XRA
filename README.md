@@ -1,6 +1,5 @@
 # Directly install without the need to register an IP VPS
 
-# Order from me (MUST READ) before using
 
 </p> 
 <h2 align="center"> Supported Linux Distribution</h2>
@@ -18,7 +17,7 @@
 - If you install the Script twice, you need to rebuild the VPS to factory settings, in the VPS provider panel<br>
 - DOMAIN (MUST) / Random<br>
 - DEBIAN 9/10<br>
-- Ubuntu 18/20 LTS<br>
+- Ubuntu 18/20/22 LTS<br>
 - CPU MIN 1 CORE<br>
 - RAM 1GB<br>
 - (Recommendation) Ubuntu 18 / 20 LTS (STABLE to use)
