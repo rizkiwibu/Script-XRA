@@ -9,4 +9,4 @@ apt update && apt install wget -y && wget -qO- -O udp.sh "https://raw.githubuser
 ```
 
 - NS Pointing
-  ![Service Status](https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/udp-custom/slowdns/nspointing.png)
+  ![Service Status](https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/udp-custom/slowdns/nspointing.png)
