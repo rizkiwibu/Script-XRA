@@ -23,7 +23,7 @@
 - (Recommendation) Ubuntu 18 / 20 LTS (STABLE to use)
 <br>
 
-# Cloudflare settings for those who have their own Domain, you can check at folder [image](https://github.com/givpn/AutoScriptXray/tree/master/image) to display other settings
+# Cloudflare settings for those who have their own Domain, you can check at folder [image](https://github.com/Mark-HDR/Script-XRAY/tree/master/image) to display other settings
 
 <br>
 - SSL/TLS : FULL<br>
@@ -73,16 +73,16 @@
 - no auto backup? which... is permanently removed
 - Just accept the existing features / you can add them yourself manually
 - Additional Features (Optional) skipper (NOTE) install after [Step Install] is complete
-- Optional [install OpenVPN + Slowdns +](https://github.com/givpn/AutoScriptXray/tree/master/udp-custom) UDP-Custom by [Exe302](https://gitlab.com/Exe302) + Slowdns by [SL](https://github.com/fisabiliyusri)
-- Optional [install Panel Webmin + ADS Block](https://github.com/givpn/AutoScriptXray/tree/master/helium) Helium version 3.0 by [Abi Darwish](https://github.com/abidarwish)
-- Optional [install Bot Telegram Xolpanel](https://github.com/givpn/AutoScriptXray/tree/master/bot%20telegram%20panel) by [XolvaID](https://github.com/XolvaID)
+- Optional [install OpenVPN + Slowdns +](https://github.com/Mark-HDR/Script-XRAY/tree/master/udp-custom) UDP-Custom by [Exe302](https://gitlab.com/Exe302) + Slowdns by [SL](https://github.com/fisabiliyusri)
+- Optional [install Panel Webmin + ADS Block](https://github.com/Mark-HDR/Script-XRAY/tree/master/helium) Helium version 3.0 by [Abi Darwish](https://github.com/abidarwish)
+- Optional [install Bot Telegram Xolpanel](https://github.com/Mark-HDR/Script-XRAY/tree/master/bot%20telegram%20panel) by [XolvaID](https://github.com/XolvaID)
   
 # Menu
 ![Service Status](https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/image/menu.png)
 
 # Service Status
 
-![Service Status](https://raw.githubusercontent.com/caliphdev/AutoScriptXray/master/image/service.png)
+![Service Status](https://raw.githubusercontent.com/Mark-HDR/Script-XRAY/master/image/service.png)
 
 # [Step Install]
 
