@@ -47,10 +47,10 @@ country=$(echo $ip_info | jq -r '.country')
 region=$(echo $ip_info | jq -r '.region')
 isp=$(echo $ip_info | jq -r '.org')
 
+systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tls}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlink="trojan://${uuid}@${domain}:${tls}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=isi_bug_disini#${user}"
 trojanlink2="trojan://${uuid}@isi_bug_disini:${ntls}?path=%2Ftrojan-ws&security=none&host=${domain}&type=ws#${user}"
-systemctl restart xray
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-trojan.log
 echo -e "\E[0;41;36m           TROJAN ACCOUNT           \E[0m" | tee -a /etc/log-create-trojan.log
@@ -78,6 +78,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-trojan.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-trojan.log
 echo "" | tee -a /etc/log-create-trojan.log
+echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 m-trojan
 fi
